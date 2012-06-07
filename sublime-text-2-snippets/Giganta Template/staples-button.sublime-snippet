@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+<a id="button" href="${2: href}">
+		<span class="b b1"><span class="b b5">${1:button-text}</span></span>
+		<span class="b b2"></span>
+		<span class="b b3"></span>
+		<span class="b b4"></span>
+		<span class="b b6"></span>
+	</a>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>staples-button</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

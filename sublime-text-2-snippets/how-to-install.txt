@@ -1,0 +1,6 @@
+Instructions:
+
+Place this folder in your AppData/Local/Sublime Text 2/Packages/User folder
+On mac, it's in applications
+
+Then look under snippts to see if it's there.

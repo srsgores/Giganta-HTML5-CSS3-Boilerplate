@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+	${1: <span class="button"><p class="t">t</p></span>
+	<span class="button"><p class="s">s</p></span>
+	<span class="button"><p class="y">y</p></span>
+	<span class="button"><p class="f">f</p></span>
+	<span class="button"><p class="g">g</p></span>
+	<span class="button"><p class="k">k</p></span>
+	<span class="button"><p class="l">l</p></span>
+	<span class="button"><p class="m">m</p></span>}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>blue-metal-social-buttons</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
