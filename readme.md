@@ -1,7 +1,6 @@
-+Giganta-HTML5-CSS3-Boilerplate
-+==============================
-+
-+Open-source html5 flexible css3 layout boilerplate template for web designers
+Giganta-HTML5-CSS3-Boilerplate
+==============================
+Open-source html5 flexible css3 layout boilerplate template for web designers
 
 Giganta Boilerplate is a professional front-end template that helps you build fast, robust, adaptable, and future-proof websites. Spend more time developing and less time reinventing the wheel.  It's based off of the HTML5 Boilerplate template, which adheres to today's latest web standards.  Whereas the HTML5 Boilerplate is best known for its simplicity, Giganta aims to do the opposite; boasting a collection of high-quality, professional-looking CSS3 styles, this template aims to give designers the most possible, so that they can quickly start styling based off of other good styles.  But it's not just about the front-end; Giganta is designed with performance in mind, all CSS minified with client-side JS (soon to be server-side with NodeJS).  Scripts are loaded in an optimal fashion, and concatinated.  CSS is optimized with LESS.
 
