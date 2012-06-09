@@ -18,16 +18,20 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
+    <link href='http://fonts.googleapis.com/css?family=Erica+One|Ubuntu+Condensed|Open+Sans|Maven+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/base.css" media = "@screen (max-width = "900px")">
     <link rel="stylesheet" href="css/style.css" media = "@screen (max-width = "900px")">
+    <link rel="stylesheet" href="css/animations.css" media = "@screen (max-width = "900px")">
+    <link rel="stylesheet" href="css/typography.css" media = "@screen (max-width = "900px")">
+    <link rel="stylesheet" href="css/buttons.css" media = "@screen (max-width = "900px")">
 
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
     <!-- All JavaScript at the bottom, except this Modernizr build.
          Modernizr enables HTML5 elements & feature detects for optimal performance.
          Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="js/vendor/modernizr-2.5.3.min.js"></script>
-    <script src="js/vendor/respond.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 </head>
 <body>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -35,8 +39,56 @@
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
     <!-- Add your site or application content here -->
+    <header id="main" class="main-menu"><a href = "/index.html"><img src="img/logo.png" class="flash-hover"></img></a>
+        <nav id="nav-main" class="top-menu">
+            <a href="index.html">Home</a>
+            <a href="docs/about.html">About</a>
+            <a href="docs/features.html">Features</a>
+            <a href="docs/installation.html">Installation</a>
+            <a href="help-support/contact.html">Contact</a>
+        </nav>
+    </header>
+    <div id="main-content">
+    <div id="top-a" class="front-banner">
+        <img src="img/frontpage/giganta-tablet.png" alt="Introducing Giganto -- The latest and most comprehensive boilerplate for web" class="showcase">
+        <button type="button" class = "showcase-buttonset">Take the tour</button>
+        <button type="button" class = "showcase-buttonset">Browse features</button>
+    </div>
+
+    <section class="features" id="top-b">
+        <h1 class="module-title">Features</h1>
+        <div class="feature">
+            <img src="img/features/flex-layout.png" alt="flex-box-layout" class="feature-image-left">
+            <h2 class="feature-name">Entirely Flexible Layout</h2>
+            <p class="feature-description">Enjoy an entirely flexible layout, and <b>never touch a grid-system again</b>.  Using <b>flexie.js</b>, you can now code in newly-introduced <em>flexible box model</em>.  Now, instead of using <code>float: left</code> or <code>float: right</code>, all you need to do is declare a <code>flex-order</code>, and you are set to go!  All this, in all browsers <strong>including IE6 and up</strong>!</p>
+        </div>
+
+        <div class="feature">
+            <img src="img/features/blazing-fast.png" alt="blazing-fast" class="feature-image-left">
+            <h2 class="feature-name">Blazing Fast</h2>
+            <p class="feature-description">Based on a source you know and trust, the <a href="http://html5boilerplate.com/" title="HTML Boilerplate">HTML Boilerplate </a>, Giganta takes from the learned lessons of the best developers.  All scripts are minified upon deployment, CSS compressed and in <code>LESS</code> format, and most scripts loaded via <em>CDN</em>.</p>
+        </div>
+
+        <div class="feature">
+            <img src="img/features/loaded.png" alt="loaded" class="feature-image-left">
+            <h2 class="feature-name">Loaded With Goodies</h2>
+            <p class="feature-description">When it comes to content, Giganta makes getting your content out there as easy as possible.  Not only does Giganta come with thousands upon thousands of lines of professional CSS3 designs and animations... it also includes every single <strong>sublime text 2 snippet</strong> you'll ever need!</p>
+        </div>
+            
+        <div class="feature">
+            <img src="img/features/cross-browser-mobile.png" alt="cross-browser-mobile" class="feature-image-left">
+            <h2 class="feature-name">Cross-Browser and Mobile-Friendly</h2>
+            <p class="feature-description">Without having to know any jQUery Mobile code or any jQuery UI code, your site can be adapted for any type of screen.  Using the <a href="http://mobilizejs.com/" title="Mobilize.js">Mobilize.js</a>, your site is automatically transformed into a professional-looking mobile website.</p>
+        </div>
+    </section>
+    <article class="homepage-description">
+        <h1 class="article-header">Giganta</h1>
+        <h2 class="subtitle">The world's best open-source <code>HTML5</code> and <code>CSS3</code> Boilerplate</h2>
+        <p class="description">With Giganta, creating professional and semantic <code>HTML</code> markup has never been easier.  Whereas the HTML boilerplate is a minimal version of what you might need, Giganta strives to do the opposite.  With hundreds of lines of possibly unnecessary CSS3 code, and semantic markup to help you along, in addition to <em>Sublime Text 2</em> snippets, you can go from designing to marking up your content faster than ever before.  <button type="learn-more">Learn more</button></p>
+    </article>
 
 
+    </div>
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
@@ -46,10 +98,19 @@
     <!-- scripts concatenated and minified via build script -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/vendor/move.js" type="text/javascript"></script>
-    <script src="js/vendor/prefixfree.js"></script>
+    <script src="js/vendor/move.js"</script>
     <script src="js/vendor/flexie.js"></script>
     <script src="js/vendor/move.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/css3finalize/2.4/jquery.css3finalize.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/dd_belatedpng/0.0.8/dd_belatedpng.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/flexie/1.0.0/flexie.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.formalize.js/1.2/jquery.formalize.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mobilizejs/0.9/mobilize.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js" media = "@screen"></script>
     <!-- end scripts -->
 
     <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
