@@ -4,6 +4,13 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if IE]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/flexie/1.0.0/flexie.min.js"></script>
+    <script src="js/vendor/move.js"</script>
+<![endif]-->
 <head>
     <meta charset="utf-8">
 
@@ -20,7 +27,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link href='http://fonts.googleapis.com/css?family=Erica+One|Ubuntu+Condensed|Open+Sans|Maven+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/base.css" media = "@screen (max-width = "900px")">
-    <link rel="stylesheet" href="css/style.css" media = "@screen (max-width = "900px")">
+    <link rel="stylesheet/less" href="less/style.less" media = "@screen (max-width = "900px")">
     <link rel="stylesheet" href="css/animations.css" media = "@screen (max-width = "900px")">
     <link rel="stylesheet" href="css/typography.css" media = "@screen (max-width = "900px")">
     <link rel="stylesheet" href="css/buttons.css" media = "@screen (max-width = "900px")">
@@ -30,8 +37,7 @@
     <!-- All JavaScript at the bottom, except this Modernizr build.
          Modernizr enables HTML5 elements & feature detects for optimal performance.
          Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    
 </head>
 <body>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -41,18 +47,20 @@
     <!-- Add your site or application content here -->
     <header id="main" class="main-menu"><a href = "/index.html"><img src="img/logo.png" class="flash-hover"></img></a>
         <nav id="nav-main" class="top-menu">
-            <a href="index.html">Home</a>
-            <a href="docs/about.html">About</a>
-            <a href="docs/features.html">Features</a>
-            <a href="docs/installation.html">Installation</a>
-            <a href="help-support/contact.html">Contact</a>
+            <ul class = "top-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="docs/about.html">About</a></li>
+                <li><a href="docs/features.html">Features</a></li>
+                <li><a href="docs/installation.html">Installation</a></li>
+                <li><a href="help-support/contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <div id="main-content">
     <div id="top-a" class="front-banner">
         <img src="img/frontpage/giganta-tablet.png" alt="Introducing Giganto -- The latest and most comprehensive boilerplate for web" class="showcase">
-        <button type="button" class = "showcase-buttonset">Take the tour</button>
-        <button type="button" class = "showcase-buttonset">Browse features</button>
+        <div class = "buttonset-separated"><button type="button" class = "showcase-buttonset">Take the tour</button>
+                <button type="button" class = "showcase-buttonset">Browse features</button></div>
     </div>
 
     <section class="features" id="top-b">
@@ -92,34 +100,29 @@
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
 
     <!-- scripts concatenated and minified via build script -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/vendor/move.js"</script>
-    <script src="js/vendor/flexie.js"></script>
-    <script src="js/vendor/move.js"></script>
+    
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/css3finalize/2.4/jquery.css3finalize.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/dd_belatedpng/0.0.8/dd_belatedpng.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/flexie/1.0.0/flexie.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.formalize.js/1.2/jquery.formalize.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/mobilizejs/0.9/mobilize.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js" media = "@screen"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js" media = "@device"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.4/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mobilizejs/0.9/mobilize.min.js" media = "@device"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js" media = "@screen"></script> -->
     <!-- end scripts -->
 
     <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
          mathiasbynens.be/notes/async-analytics-snippet -->
-    <script>
+    <!-- <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+    </script> -->
 </body>
 </html>
