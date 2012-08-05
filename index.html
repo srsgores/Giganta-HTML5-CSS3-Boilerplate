@@ -26,11 +26,11 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link href='http://fonts.googleapis.com/css?family=Erica+One|Ubuntu+Condensed|Open+Sans|Maven+Pro' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/base.css" media = "@screen (max-width = "900px")">
-    <link rel="stylesheet/less" href="less/style.less" media = "@screen (max-width = "900px")">
-    <link rel="stylesheet" href="css/animations.css" media = "@screen (max-width = "900px")">
-    <link rel="stylesheet" href="css/typography.css" media = "@screen (max-width = "900px")">
-    <link rel="stylesheet" href="css/buttons.css" media = "@screen (max-width = "900px")">
+    <link rel="stylesheet" href="css/base.css">
+    <!-- <link rel="stylesheet/less" href="less/style.less"> -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -45,7 +45,8 @@
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
     <!-- Add your site or application content here -->
-    <header id="main" class="main-menu"><a href = "/index.html"><img src="img/logo.png" class="flash-hover"></img></a>
+    <header id="main" class="main-menu loading">
+        <a href = "/index.html"><img src="img/logo.png" class="flash-hover"></img></a>
         <nav id="nav-main" class="top-menu">
             <ul class = "top-nav">
                 <li><a href="index.html">Home</a></li>
@@ -56,7 +57,8 @@
             </ul>
         </nav>
     </header>
-    <div id="main-content">
+    <div id="ajaxloader1"></div>
+    <div id="main-content" role = "main" class = "loading">
     <div id="top-a" class="front-banner">
         <img src="img/frontpage/giganta-tablet.png" alt="Introducing Giganto -- The latest and most comprehensive boilerplate for web" class="showcase">
         <div class = "buttonset-separated"><button type="button" class = "showcase-buttonset">Take the tour</button>
@@ -104,15 +106,19 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
 
     <!-- scripts concatenated and minified via build script -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/plugins.js"></script> -->
+    <script src="js/loading.js"></script>
     
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/css3finalize/2.4/jquery.css3finalize.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.0/less-1.3.0.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js" media = "@device"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/hashgrid/6/hashgrid.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/store.js/1.1.1/store.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/kerning.js/0.2/kerning.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.4/bootstrap.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/mobilizejs/0.9/mobilize.min.js" media = "@device"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.1.3/jquery.transit.min.js"></script>
+    <script src="js/vendor/can.jquery.min.js"></script>
+    <script src = "js/main.js"></script>
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js" media = "@screen"></script> -->
     <!-- end scripts -->
 
