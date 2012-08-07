@@ -1,23 +1,26 @@
 /*------------------------------------------------------------------------------------------------------------------------
-
     Author: Sean Goresht
-    www: https://seangoresht.com/
+    www: http://seangoresht.com/
     github: https://github.com/srsgores
 
     twitter: http://twitter.com/S.Goresht
 
+    Giganta Template - HTML5 CSS3 Boilerplate Template
     Licensed under the GNU Public License
 
+    =============================================================================
+    Filename: base.css
+    =============================================================================
+    This file acts as a base for any html5 project.  Most of the styles in this file have been taken directly from the HTML5 boilerplate template.
+
+    This is also the file where you can find the ajax loaders for the initial load feature.
+
 --------------------------------------------------------------------------------------------------------------------- */
+
 
 /* =============================================================================
    Base
    ========================================================================== */
-
-/*
- * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
- * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
- */
 
 html {
     font-size: 100%;
@@ -63,16 +66,6 @@ h5 {
 h6 {
     font-size: 1.1em;
 }
-/*Optional snow background*/
-
-/*body {
-    background-color: #6b92b9;
-    background-image: url('http://img138.imageshack.us/img138/5230/snowh.png'), url('http://img594.imageshack.us/img594/9146/snow3q.png'), url('http://img196.imageshack.us/img196/5065/snow2l.png');
-    -webkit-animation: snow 20s linear infinite;
-    -moz-animation: snow 20s linear infinite;
-    -ms-animation: snow 20s linear infinite;
-    animation: snow 20s linear infinite;
-}*/
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -279,4 +272,368 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img {
+    border: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+img.showcase {
+    margin: auto;
+}
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure {
+    margin: 0;
+}
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Indicate that 'label' will shift focus to the associated form element
+ */
+
+label {
+    cursor: pointer;
+}
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px;
+}
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *width: 13px;
+    *height: 13px;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden, .loading {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* =============================================================================
+CSS loaders
+========================================================================== */
+#ajaxloader1, #ajaxloader2, #ajaxloader3, #ajaxloader4
+{
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+  border: 8px solid #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 2px #eee;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  -ms-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#ajaxloader1::after {
+  content: 'Loading...';
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+#ajaxloader2
+{
+  border-right: 0 none;
+}
+
+#ajaxloader3
+{
+  border-left-color: transparent;
+}
+
+#ajaxloader4
+{
+  border-bottom-color: transparent;
+}
+
+#ajaxloader3::after, #ajaxloader4::after
+{
+  display: block;
+  content: " ";
+  width: 9px;
+  height: 9px;
+  border: 6px solid #fff;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+#ajaxloader3::after
+{
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+#ajaxloader4::after
+{
+  width: 13px;
+  height: 13px;
+  margin: 1px;
+  border-width: 8px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+@-webkit-keyframes spin
+{
+  from { -webkit-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -webkit-transform: rotate(180deg); opacity: 1; }
+  to   { -webkit-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-moz-keyframes spin
+{
+  from { -moz-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -moz-transform: rotate(180deg); opacity: 1; }
+  to   { -moz-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-ms-keyframes spin
+{
+  from { -ms-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -ms-transform: rotate(180deg); opacity: 1; }
+  to   { -ms-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-o-keyframes spin
+{
+  from { -o-transform: rotate(0deg); opacity: 0.4; }
+  50%  { -o-transform: rotate(180deg); opacity: 1; }
+  to   { -o-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@keyframes spin
+{
+  from { transform: rotate(0deg); opacity: 0.2; }
+  50%  { transform: rotate(180deg); opacity: 1; }
+  to   { transform: rotate(360deg); opacity: 0.2; }
 }

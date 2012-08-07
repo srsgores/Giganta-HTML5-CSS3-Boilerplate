@@ -1,3 +1,22 @@
+/*------------------------------------------------------------------------------------------------------------------------
+    Author: Sean Goresht
+    www: http://seangoresht.com/
+    github: https://github.com/srsgores
+
+    twitter: http://twitter.com/S.Goresht
+
+    Giganta Template - HTML5 CSS3 Boilerplate Template
+    Licensed under the GNU Public License
+
+	=============================================================================
+	Filename: template.js
+	=============================================================================
+	This file, for mustache.js, will allow dynamic creation of pages based off of data being put in in any of the html files
+
+--------------------------------------------------------------------------------------------------------------------- */
+
+template = "
+{{#head}}
 <!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <script src = "extras/icomoon/lte-ie7.js"></script><![endif]-->
@@ -18,8 +37,8 @@
          More info: h5bp.com/i/378 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Giganta Template 2012</title>
-    <meta name="description" content="">
+     <title>{title}</title>
+    <meta name="description" content="{meta-description}">
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
@@ -49,6 +68,7 @@
          Create your own custom Modernizr build: www.modernizr.com/download/ -->
     
 </head>
+{{/head}}
 <body>
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
          chromium.org/developers/how-tos/chrome-frame-getting-started -->
@@ -56,8 +76,8 @@
 
     <!-- Add your site or application content here -->
     <header id="main" class="main-menu loading">
-        <a href = "/index.html"><img src="img/logo.png" class="flash-hover"></img></a>
-        <nav id="nav-main" class="top-menu">
+        {{#logo}}<a href = "/index.html"><img src="img/logo.png" class="flash-hover"></img></a>{{/logo}}
+        {{#nav}}<nav id="nav-main" class="top-menu">
             <ul class = "top-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="docs/about.html">About</a></li>
@@ -65,59 +85,25 @@
                 <li><a href="docs/installation.html">Installation</a></li>
                 <li><a href="help-support/contact.html">Contact</a></li>
             </ul>
-        </nav>
+        </nav>{{/nav}}
     </header>
     <div id="ajaxloader1"></div>
     <div id="main-content" role = "main" class = "loading">
-    <div id="top-a" class="front-banner">
-        <hgroup>
-            <h1 class="hero">
-                Introducing <em>Giganta <code>HTML5 CSS3</code> Boilerplate</em>
-            </h1>
-            <h2 class="subtitle">
-                A next-get, integrative boilerplate for quick creation of <code>html</code>
-            </h2>
+    {{#top_a}}
+    <div id="top-a">
+    {{content}}
+    </div>{{/top_a}}
+    {{#article}}
+    <article>
+    <hgroup>
+        <h1 class="article-header">{{header}}</h1>
+        <h2 class="subtitle">{{subtitle}}</h2>
         </hgroup>
-        <i class="icon-monitor showcase" data-title="Introducing Giganto -- The latest and most comprehensive boilerplate for web"></i>
-        <div class = "buttonset-separated"><button type="button" class = "showcase-buttonset btn btn-primary">Take the tour</button>
-                <button type="button" class = "showcase-buttonset btn btn-secondary">Browse features</button></div>
-    </div>
-
-    <section class="features" id="top-b">
-        <h1 class="module-title">Features</h1>
-        <div class = "features-wrapper">
-            <div class="feature">
-                    <i class="icon-bolt"></i>
-                    <h2 class="feature-name">Entirely Flexible Layout</h2>
-                    <p class="feature-description">Enjoy an entirely flexible layout, and <b>never touch a grid-system again</b>.  Using <b>flexie.js</b>, you can now code in newly-introduced <em>flexible box model</em>.  Now, instead of using <code>float: left</code> or <code>float: right</code>, all you need to do is declare a <code>flex-order</code>, and you are set to go!  All this, in all browsers <strong>including IE6 and up</strong>!</p>
-                </div>
-        
-                <div class="feature">
-                    <i class="icon-cog"></i>
-                    <h2 class="feature-name">Blazing Fast</h2>
-                    <p class="feature-description">Based on a source you know and trust, the <a href="http://html5boilerplate.com/" title="HTML Boilerplate">HTML Boilerplate </a>, Giganta takes from the learned lessons of the best developers.  All scripts are minified upon deployment, CSS compressed and in <code>LESS</code> format, and most scripts loaded via <em>CDN</em>.</p>
-                </div>
-        
-                <div class="feature">
-                    <i class="icon-loop"></i>
-                    <h2 class="feature-name">Loaded With Goodies</h2>
-                    <p class="feature-description">When it comes to content, Giganta makes getting your content out there as easy as possible.  Not only does Giganta come with thousands upon thousands of lines of professional CSS3 designs and animations... it also includes every single <strong>sublime text 2 snippet</strong> you'll ever need!</p>
-                </div>
-                    
-                <div class="feature">
-                    <i class="icon-loop"></i>
-                    <h2 class="feature-name">Cross-Browser and Mobile-Friendly</h2>
-                    <p class="feature-description">Without having to know any jQUery Mobile code or any jQuery UI code, your site can be adapted for any type of screen.  Using the <a href="http://mobilizejs.com/" title="Mobilize.js">Mobilize.js</a>, your site is automatically transformed into a professional-looking mobile website.</p>
-                </div></div>
-    </section>
-    <article class="homepage-description">
-        <h1 class="article-header">Giganta</h1>
-        <h2 class="subtitle">The world's best open-source <code>HTML5</code> and <code>CSS3</code> Boilerplate</h2>
-        <p class="description">With Giganta, creating professional and semantic <code>HTML</code> markup has never been easier.  Whereas the HTML boilerplate is a minimal version of what you might need, Giganta strives to do the opposite.  With hundreds of lines of possibly unnecessary CSS3 code, and semantic markup to help you along, in addition to <em>Sublime Text 2</em> snippets, you can go from designing to marking up your content faster than ever before.  <button type="learn-more">Learn more</button></p>
+        {{content}}
     </article>
+    {{/article}}
 
-
-    </div>
+    {{#footer}}
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
@@ -139,7 +125,6 @@
     <script src="extras/chosen/chosen.jquery.min.js"></script>
     <!-- <script src="js/vendor/can.jquery.min.js"></script> -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.5.0-dev/mustache.min.js"></script>
-    <script src = "views/mustache/template.js"></script>
     <!-- <script src="js/vendor/can.fixture.js"></script> -->
     <script src = "js/main.js"></script>
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js" media = "@screen"></script> -->
@@ -155,3 +140,6 @@
     </script> -->
 </body>
 </html>
+{{/footer}}
+
+";

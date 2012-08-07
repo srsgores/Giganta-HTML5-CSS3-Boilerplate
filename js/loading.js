@@ -16,5 +16,5 @@ function hideLoader (loader_div, selector, hidden_class) {
 }
 
 jQuery(document).ready(function($) {
-	hideLoader("#ajaxloader1", "body > div", "loading");
+	hideLoader("#ajaxloader1", "body > div, header, footer", "loading");
 });
